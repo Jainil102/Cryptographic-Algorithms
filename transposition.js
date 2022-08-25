@@ -70,7 +70,6 @@ function Decrypt(ciphertext, keyword) {
         c = keylength;
         s = cipherlength/keylength;
         r = Math.floor(s);
-        console.log(s + " " + r)
         till = cipherlength%keylength;
         r += 1;
     }
@@ -78,11 +77,9 @@ function Decrypt(ciphertext, keyword) {
     if(till === 0){
         till = keylength;
     }
-    console.log(r + " " + c + " " + till);
 
     answer = generatelength(key);
     answerlength = answer.length;
-    console.log(answer);
 
     let length = new Array(answerlength);
     for(i=0;i<answerlength;i++){
@@ -104,10 +101,7 @@ function Decrypt(ciphertext, keyword) {
             }
         }
     }
-    // console.log(k);
-    // console.log(length);
     }
-    console.log(length);
     var j=0,k;
     var plaintext = "";
     for(i=0;i<r;i++){
@@ -120,7 +114,6 @@ function Decrypt(ciphertext, keyword) {
                 return plaintext;
             }
         }
-        console.log(plaintext);
     }
     return plaintext;
 }
