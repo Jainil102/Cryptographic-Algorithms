@@ -1,2 +1,2 @@
-# Ciphers
-Managing Cryptographic Algorithms for an upcoming project
+# Cryptographic ALgorithms
+Website for demonstrating various cryptographic algorithms
