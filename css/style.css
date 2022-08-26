@@ -60,6 +60,10 @@ body {
     width: 20px;
 }
 
+.hover-border {
+    font-family: 'Pacifico', cursive;
+}
+
 .hover-border::after {
     content: '';
     width: 0%;
