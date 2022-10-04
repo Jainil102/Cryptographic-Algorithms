@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Cryptographic Algorithms</title>
 
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
@@ -14,7 +14,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="images/website_logo.png">
-
 </head>
 
 <body>
@@ -97,116 +96,173 @@
         </div>
     </nav>
 
-    <!-- Body -->
-    <div class="home-first-block">
-        <div class="home-info">
-            <div class="home-question-title">
-                What is Cryptography?
-            </div>
-            <p class="home-question-answer">
-                Cryptography is technique of securing information and communications through use of codes so that only
-                those person for whom the information is intended can understand it and process it. Thus preventing
-                unauthorized access to information.
-                <br>
-                These algorithms are used for cryptographic key generation, digital signing, verification to protect
-                data privacy, web browsing on internet and to
-                protect confidential transactions such as credit card and debit card transactions.
-            </p>
-            <div class="arrow-box">
-                <img src="images/down_arrow.png" alt="Downward Arrow">
-            </div>
-            <div class="typing animate__animated animate__slideInUp">
-                Modules (
-                <span class="type-writer" style="margin: 10px;" data-wait="2000"
-                    data-words='["Symmetric Key Cryptography", "Hash Functions", "Asymmetric Key Cryptography"]'></span>
-                )
-            </div>
+    <!-- Middle Content -->
+    <div class="block">
+        <div class="overlay"></div>
+        <div class="heading">
+            <h1 class="animate__animated animate__slideInUp" data-aos="fade-in" style="text-align: center;">Caesar
+                Cipher
+            </h1>
         </div>
-        <div class="home-algo-info">
-            <iframe class="osvideo" width="500" height="300" src="https://www.youtube.com/embed/6_Cxj5WKpIw"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+        <div class="arrow-box">
+            <img src="images/down_arrow.png" alt="Downward Arrow">
         </div>
     </div>
-    <div class="home-second-block">
-        <div class="home-algo-basic-info">
-            <div class="home-algo-title" data-aos="zoom-in">
-                Symmetric Cryptography
+
+    <div class="mid-wrapper">
+        <div class="mid-data-block">
+            <div class="mid-info-block">
+                <p class="headings">
+                    <strong>Introduction</strong>
+                </p>
+                <p>
+                    The Caesar Cipher technique is one of the earliest and simplest
+                    methods of encryption technique. It's simply a type of substitution
+                    cipher, i.e., each letter of a given text is replaced by a letter with a
+                    fixed number of positions down the alphabet. For example with a shift of 1,
+                    A would be replaced by B, B would become C, and so on. The method is apparently
+                    named after Julius Caesar, who apparently used it to communicate with his officials.
+                </p>
+                <p>
+                    Thus to cipher a given text we need an integer value,
+                    known as a shift which indicates the number of positions each
+                    letter of the text has been moved down.
+                    The encryption can be represented using modular arithmetic by first transforming the
+                    letters into numbers, according to the scheme, A = 0, B = 1,…, Z = 25. Encryption of a
+                    letter by a shift n can be described mathematically as.
+                </p>
+
+                <p class="picture">
+                    <img style="width: 35%; height: fit-content"
+                        src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-dca1f01b6a20a73c189d48228c230009_l3.svg">
+                </p>
+                <p style="text-align: center">
+                    (Encryption phase with shift n)
+                </p>
+
+                <p class="picture">
+                    <img style="width:35%; height: fit-content"
+                        src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-c467600170f4b71b5d82f39f79b82a67_l3.svg">
+                </p>
+                <p style="text-align: center">
+                    (Decryption phase with shift n)
+                </p>
+
+                <p class="picture">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/ceaserCipher.png">
+                </p>
             </div>
-            <div class="home-specififc-algo-info" data-aos="fade-left">
-                <div class="card text-dark bg-light mb-3 home-card">
-                    <div class="card-header home-card-header">Basic Information</div>
-                    <div class="card-body home-card-body">
-                        <p class="card-text home-card-text">It is an encryption system where the sender and receiver of
-                            message use a single common key to encrypt and decrypt messages. The most popular symmetric
-                            key cryptography system is Data Encryption System(DES).</p>
-                        <a href="symmetric.html" class="btn btn-light home-algo-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                class="bi bi-check-circle home-tick" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                <path
-                                    d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
-                            </svg>
-                            Learn More
-                        </a>
-                    </div>
+
+            <div class="mid-example-block">
+                <p class="headings">
+                    <strong>Example:</strong>
+                </p>
+
+                <pre>
+                        Text : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                        Shift: 23
+                        Cipher: XYZABCDEFGHIJKLMNOPQRSTUVW
+                    </pre>
+            </div>
+
+            <!-- <div class="mid-encrypt-block">
+                    <p class="headings">
+                        <strong>Encryption</strong>
+                    </p>
                 </div>
-            </div>
-        </div>
-        <div class="home-algo-basic-info">
-            <div class="home-algo-title" id="title1" style="text-align: right;" data-aos="zoom-in">
-                Hash <br> Functions
-            </div>
-            <div class="home-specififc-algo-info" data-aos="fade-right">
-                <div class="card text-dark bg-light mb-3 home-card">
-                    <div class="card-header home-card-header">Basic Information</div>
-                    <div class="card-body home-card-body" style="align-items: flex-end;">
-                        <p class="card-text home-card-text">There is no usage of any key in this algorithm. A hash value
-                            with fixed length is calculated as per the plain text which makes it impossible for contents
-                            of plain text to be recovered. Many operating systems use hash functions to encrypt
-                            passwords.</p>
-                        <a href="" class="btn btn-light home-algo-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                class="bi bi-check-circle home-tick" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                <path
-                                    d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
-                            </svg>
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="home-algo-title" id="title" style="text-align: right;" data-aos="zoom-in">
-                Hash Functions
-            </div>
-        </div>
-        <div class="home-algo-basic-info">
-            <div class="home-algo-title" data-aos="zoom-in">
-                Asymmetric Cryptography
-            </div>
-            <div class="home-specififc-algo-info" data-aos="fade-left">
-                <div class="card text-dark bg-light mb-3 home-card">
-                    <div class="card-header home-card-header">Basic Information</div>
-                    <div class="card-body home-card-body">
-                        <p class="card-text home-card-text">Under this system a pair of keys is used to encrypt and
-                            decrypt information. A public key is used for encryption and a private key is used for
-                            decryption.</p>
-                        <a href="" class="btn btn-light home-algo-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                class="bi bi-check-circle home-tick" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                <path
-                                    d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
-                            </svg>
-                            Learn More
-                        </a>
-                    </div>
-                </div>
+    
+                <div class="mid-decrypt-block">
+                    <p class="headings">
+                        <strong>Decryption</strong>
+                    </p>
+
+                </div> -->
+
+            <div class="mid-extra-block">
+                <p>
+                    <strong>
+                        Algorithm for Caesar Cipher
+                    </strong>
+                </p>
+
+                <p>
+                    <strong>
+                        Input:
+                    </strong>
+                </p>
+
+                <ol>
+                    <li>
+                        A String of lower case letters, called Text.
+                    </li>
+                    <li>
+                        An Integer between 0-25 denoting the required shift.
+                    </li>
+                </ol>
+
+                <p>
+                    <strong>
+                        Procedure:
+                    </strong>
+                </p>
+
+                <ul>
+                    <li>
+                        Traverse the given text one character at a time .
+                    </li>
+
+                    <li>
+                        For each character, transform the given character as per the rule, depending on whether we’re
+                        encrypting or decrypting the text.
+                    </li>
+
+                    <li>
+                        Return the new string generated.
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
+
+    <!-- Implementation -->
+    <div class="last-block">
+        <div class="mid-heading-wrapper">
+            <div class="mid-heading">
+                <h1 class="hover-border">Implementation</h1>
+            </div>
+        </div>
+        <div class="">
+            <div class="row">
+                <div class="col-lg-6 info-card">
+                    <div class="card border-success">
+                        <div class="card-body">
+                            <h5 class="card-title text-center footer__logo">Encryption</h5>
+                            <br>
+                            <p class="card-text" style="font-weight: bold;">
+                                Plaintext: <input type="text" id="plain-text" class="input"><br><br>
+                                Key: <input type="number" id="key" class="input key"><br><br>
+                                Ciphered Text: <text id="output" style="margin-left: 15px;"></text>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 info-card">
+                    <div class="card border-danger">
+                        <div class="card-body">
+                            <h5 class="card-title text-center footer__logo">Decryption</h5>
+                            <br>
+                            <p class="card-text" style="font-weight: bold;">
+                                Ciphered Text: <input type="text" id="cipher-text" class="dinput"><br><br>
+                                Key: <input type="number" id="d-key" class="input dkey"><br><br>
+                                Plain Text: <text id="d-output" style="margin-left: 40px;"></text>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    
 
     <!-- Footer -->
     <footer class="footer">
@@ -309,6 +365,7 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/caesar.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/typewriter.js"></script>
     <script type="text/javascript">

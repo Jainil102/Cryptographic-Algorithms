@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptographic Algorithms</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="images/website_logo.png">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img id="logo" src="images/website_logo.png" alt="logo">
+                <div class="hover-border">&nbsp; Cryptographic Algorithms</div>
+            </a>
+            <div class="divider"></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Symmetric
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="caesar.html">Caesar</a></li>
+                            <li><a class="dropdown-item" href="railfence.html">RailFence</a></li>
+                            <li><a class="dropdown-item" href="playfair.html">Playfair</a></li>
+                            <li><a class="dropdown-item" href="transposition.html">Transposition</a></li>
+                            <li><a class="dropdown-item" href="vigenere.html">Vigenere</a></li>
+                            <li><a class="dropdown-item" href="multiplicative.html">Multiplicative</a></li>
+                            <li><a class="dropdown-item" href="hill.html">Hill</a></li>
+                            <li><a class="dropdown-item" href="aes.html">AES</a></li>
+                        </ul>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Hash Functions
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="md5.html">MD5</a></li>
+                            <li><a class="dropdown-item" href="sha1.html">SHA-1</a></li>
+                            <li><a class="dropdown-item" href="sha2.html">SHA-2</a></li>
+                            <li><a class="dropdown-item" href="sha3.html">SHA-3</a></li>
+                            <li><a class="dropdown-item" href="hmac.html">HMAC</a></li>
+                            <li><a class="dropdown-item" href="pbkdf2.html">PBKDF2</a></li>
+                        </ul>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Asymmetric
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="rsa.html">RSA</a></li>
+                            <li><a class="dropdown-item" href="dsa.html">DSA</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="d-flex">
+                    <div class="dropdown">
+                        <input id="search-input" class="form-control me-2 dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false" placeholder="Type to search...">
+                        <ul id="suggestions" class="dropdown-menu dropdown-menu-dark" aria-labelledby="search-button">
+                        </ul>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16" style="position: absolute; right: 15px;">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Theory -->
+    <div class="block">
+        <div class="overlay"></div>
+        <div class="heading">
+            <h1 class="animate__animated animate__slideInUp" data-aos="fade-in" style="text-align: center;">Playfair
+                Cipher
+            </h1>
+        </div>
+        <div class="arrow-box">
+            <img src="images/down_arrow.png" alt="Downward Arrow">
+        </div>
+    </div>
+
+    <div class="mid-wrapper">
+        <div class="mid-data-block">
+            <div class="mid-info-block">
+                <p class="headings">
+                    <strong>Introduction</strong>
+                </p>
+                <p>
+                    The Playfair cipher was the first practical digraph
+                    substitution cipher. The scheme was invented in 1854 by
+                    Charles Wheatstone but was named after Lord Playfair who
+                    promoted the use of the cipher. In playfair cipher unlike
+                    traditional cipher we encrypt a pair of alphabets(digraphs)
+                    instead of a single alphabet.
+                </p>
+                <p>
+                    It was used for tactical purposes by British forces in the
+                    Second Boer War and in World War I and for the same purpose
+                    by the Australians during World War II. This was because Playfair
+                    is reasonably fast to use and requires no special equipment.
+                </p>
+            </div>
+
+            <!-- <div class="mid-example-block">
+                    <p class="headings">
+                        <strong>Example:</strong>
+                    </p>
+                </div> -->
+
+            <div class="mid-encrypt-block">
+                <p class="headings">
+                    <strong>Encryption</strong>
+                </p>
+                <pre>
+                        For the encryption process let us consider the following example:
+                        Key: monarchy
+                        Plaintext: instruments
+                    </pre>
+
+                <pre>
+                        <strong>The Playfair Cipher Encryption Algorithm:</strong> 
+                        <strong>The Algorithm consists of 2 steps:</strong>
+                    </pre>
+
+                <ol>
+                    <li>
+                        <strong>Generate the key Square(5x5):</strong>
+                        <ul>
+                            <li>
+                                The key square is a 5×5 grid of alphabets that acts
+                                as the key for encrypting the plaintext. Each of the
+                                25 alphabets must be unique and one letter of the
+                                alphabet (usually J) is omitted from the table
+                                (as the table can hold only 25 alphabets).
+                                If the plaintext contains J, then it is replaced by I.
+                            </li>
+                            <li>
+                                The initial alphabets in the key square are the
+                                unique alphabets of the key in the order in which
+                                they appear followed by the remaining letters of the
+                                alphabet in order.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Algorithm to encrypt the plaintext:</strong>
+                        The plaintext is split into pairs of two letters (digraphs). If there is an odd number of
+                        letters, a Z is added to the last letter.
+                        <pre>
+                                <strong>
+                                    For example:
+                                </strong>
+                                <strong>Plain Text:</strong> "instruments" 
+                                <strong>After Split:</strong>'in' 'st' 'ru' 'me' 'nt' 'sz'
+                            </pre>
+                    </li>
+                </ol>
+
+                <p>
+                    1. Pair cannot be made with same letter. Break the letter in single and add a bogus letter to the
+                    previous letter.
+                <pre>
+                        <strong>Plain Text:</strong> “hello”
+                        <strong>After Split:</strong> ‘he’ ‘lx’ ‘lo’
+                        Here ‘x’ is the bogus letter.
+                    </pre>
+
+
+                2. If the letter is standing alone in the process of pairing, then add an extra bogus letter with the
+                alone letter
+
+                <pre>
+                        <strong>Plain Text:</strong> “helloe”
+                        <strong>After Split:</strong> ‘he’ ‘lx’ ‘lo’ ‘ez’
+                        Here ‘z’  is the bogus letter.
+                    </pre>
+
+                <strong>
+                    Rules for Encryption:
+                </strong>
+                <ul>
+                    <li>
+                        If both the letters are in the same column:
+                        Take the letter below each one (going back to the top
+                        if at the bottom).
+                        <pre>
+                            <strong>For example:</strong>
+                            <strong>Diagraph: </strong> "me"
+                            <strong>Encrypted Text:</strong> cl
+                            <strong>Encryption:</strong>
+                              m -> c
+                              e -> l
+                            </pre>
+                    </li>
+                    <p class="pictures">
+                        <img
+                            src="https://media.geeksforgeeks.org/wp-content/uploads/20190818175431/encryption-of-me.png">
+                    </p>
+
+                    <li>
+                        If both the letters are in the same row: Take the letter to the right of each one (going back to
+                        the leftmost if at the rightmost position).
+                        <pre>
+                            <strong>For example: </strong> 
+                            <strong>Diagraph: </strong> "st"
+                            <strong>Encrypted Text:</strong> tl
+                            <strong>Encryption:</strong> 
+                              s -> t
+                              t -> l
+                            </pre>
+                    </li>
+                    <p class="pictures">
+                        <img
+                            src="https://media.geeksforgeeks.org/wp-content/uploads/20190818175435/encryption-of-st.png">
+                    </p>
+
+                    <li>
+                        If neither of the above rules is true: Form a rectangle with the two letters and take the
+                        letters on the horizontal opposite corner of the rectangle.
+                        <pre>
+                            <strong>For example: </strong>
+                            <strong>Diagraph: </strong> "nt"
+                            <strong>Encrypted Text:</strong> rq
+                            <strong>Encryption:</strong> 
+                              n -> r
+                              t -> q
+                            </pre>
+                    </li>
+
+                    <p class="pictures">
+                        <img
+                            src="https://media.geeksforgeeks.org/wp-content/uploads/20190818175433/encryption-of-nt.png">
+                    </p>
+                </ul>
+
+                <pre>
+                        <strong>
+                            For example:
+                        </strong>
+                        <strong>Plain Text: </strong> "instrumentsz"
+                        <strong>Encrypted Text:</strong>  gatlmzclrqtx
+                        <strong>Encryption:</strong> 
+                        i -> g
+                        n -> a
+                        s -> t
+                        t -> l
+                        r -> m
+                        u -> z
+                        m -> c
+                        e -> l
+                        n -> r
+                        t -> q
+                        s -> t
+                        z -> x
+                    </p>
+
+                    <p class = "picture">
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20190818175428/encryption-of-instruments.png">
+                    </p>
+                </div>
+    
+                <div class="mid-decrypt-block">
+                    <p class="headings">
+                        <strong>Decryption</strong>
+                    </p>
+                    <pre>
+                        Decrypting the Playfair cipher is as simple as doing the same process in reverse. 
+                        The receiver has the same key and can create the same key table, and then decrypt 
+                        any messages made using that key.
+                        Key: monarchy
+                        Plaintext: gatlmzclrqtx
+                    </pre>
+
+                <pre>
+                        <strong>The Playfair Cipher Decryption Algorithm:</strong> 
+                        <strong>The Algorithm consists of 2 steps:</strong>
+                    </pre>
+
+                <ol>
+                    <li>
+                        <strong>Generate the key Square(5x5) at the receiver's end:</strong>
+                        <ul>
+                            <li>
+                                The key square is a 5×5 grid of alphabets that acts as the key for encrypting
+                                the plaintext. Each of the 25 alphabets must be unique and one letter of the
+                                alphabet (usually J) is omitted from the table (as the table can hold only 25
+                                alphabets). If the plaintext contains J, then it is replaced by I.
+                            </li>
+                            <li>
+                                The initial alphabets in the key square are the unique
+                                alphabets of the key in the order in which they appear
+                                followed by the remaining letters of the alphabet in order.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Algorithm to decrypt the ciphertext:</strong>
+                        The ciphertext is split into pairs of two letters (digraphs).The ciphertext always has even
+                        number of characters
+                        <pre>
+                                <strong>
+                                    For example:
+                                </strong>
+                                <strong>Cipher Text:</strong> "gatlmzclrqtx" 
+                                <strong>After Split:</strong>'ga' 'tl' 'mz' 'cl' 'rq' 'tx'
+                            </pre>
+                    </li>
+                </ol>
+
+                <strong>
+                    Rules for Decryption:
+                </strong>
+                <ul>
+                    <li>
+                        If both the letters are in the same column:
+                        Take the letter above each one (going back to the bottom if at the top).
+                        <pre>
+                            <strong>For example:</strong>
+                            <strong>Diagraph: </strong> "cl" 
+                            <strong>Decrypted Text:</strong> me
+                            <strong>Decryption:</strong>
+                                c -> m
+                                l -> e
+                            </pre>
+                    </li>
+                    <p class="pictures">
+                        <img
+                            src="https://media.geeksforgeeks.org/wp-content/uploads/20190818175431/encryption-of-me.png">
+                    </p>
+
+                    <li>
+                        If both the letters are in the same row: Take the letter to the left of each one (going back to
+                        the rightmost if at the leftmost position).
+                        <pre>
+                            <strong>For example: </strong> 
+                            <strong>Diagraph: </strong> "tl"
+                            <strong>Decrypted Text:</strong> st
+                            <strong>Decryption:</strong> 
+                                t -> s
+                                l -> t
+                            </pre>
+                    </li>
+                    <p class="pictures">
+                        <img
+                            src="https://media.geeksforgeeks.org/wp-content/uploads/20190818175435/encryption-of-st.png">
+                    </p>
+
+                    <li>
+                        If neither of the above rules is true: Form a rectangle with the two letters and take
+                        the letters on the horizontal opposite corner of the rectangle.
+                        <pre>
+                            <strong>For example: </strong>
+                            <strong>Diagraph: </strong> "rq"
+                            <strong>Decrypted Text:</strong> nt
+                            <strong>Decryption:</strong> 
+                                r -> n
+                                q -> t
+                            </pre>
+                    </li>
+
+                    <p class="pictures">
+                        <img
+                            src="https://media.geeksforgeeks.org/wp-content/uploads/20190818175433/encryption-of-nt.png">
+                    </p>
+                </ul>
+
+                <pre>
+                        <strong>
+                            For example:
+                        </strong>
+                        <strong>Plain Text: </strong> "gatlmzclrqtx"
+                        <strong>Decrypted Text:</strong>  instrumentsz
+                        <strong>Decryption:</strong> 
+                        (red)-> (green)
+                            ga -> in
+                            tl -> st
+                            mz -> ru
+                            cl -> me
+                            rq -> nt
+                            tx -> sz
+                    </p>
+
+                    <p class = "picture">
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20190818175428/encryption-of-instruments.png">
+                    </p>
+                </div>
+    
+                <!-- <div class="mid-extra-block">
+    
+                </div> -->
+            </div>
+        </div>
+
+
+
+    <!-- Implementation -->
+    <div class="last-block">
+        <div class="mid-heading-wrapper">
+            <div class="mid-heading">
+                <h1 class="hover-border">Implementation</h1>
+            </div>
+        </div>
+        <div class="">
+            <div class="row">
+                <div class="col-lg-6 info-card">
+                    <div class="card border-success">
+                        <div class="card-body">
+                            <h5 class="card-title text-center footer__logo">Encryption</h5>
+                            <br>
+                            <p class="card-text" style="font-weight: bold;">
+                                Plaintext: <input type="text" id="plain-text" class="input"><br><br>
+                                Key: <input type="text" id="key" class="input key"><br><br>
+                                Ciphered Text: <text id="output" style="margin-left: 15px;"></text>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 info-card">
+                    <div class="card border-danger">
+                        <div class="card-body">
+                            <h5 class="card-title text-center footer__logo">Decryption</h5>
+                            <br>
+                            <p class="card-text" style="font-weight: bold;">
+                                Ciphered Text: <input type="text" id="cipher-text" class="dinput"><br><br>
+                                Key: <input type="text" id="d-key" class="input dkey"><br><br>
+                                Plain Text: <text id="d-output" style="margin-left: 40px;"></text>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__addr">
+            <h1 class="footer__logo">Cryptographic Algorithms</h1>
+
+            <h2>Group 38</h2>
+
+            <address>
+                Divyansh Mahida - 19BCP039<br>
+                Jainil Patel - 19BCP056<br>
+                <!-- <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a> -->
+            </address>
+        </div>
+
+        <ul class="footer__nav">
+            <li class="nav__item">
+                <h2 class="nav__title">Hash Functions</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="md5.html">MD5</a>
+                    </li>
+
+                    <li>
+                        <a href="sha1.html">SHA-1</a>
+                    </li>
+
+                    <li>
+                        <a href="hmac.html">HMAC</a>
+                    </li>
+
+                    <li>
+                        <a href="pbkdf2.html">PBKDF2</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav__item nav__item--extra">
+                <h2 class="nav__title">Symmetric Key Cryptography</h2>
+
+                <ul class="nav__ul nav__ul--extra">
+                    <li>
+                        <a href="caesar.html">Caesar</a>
+                    </li>
+
+                    <li>
+                        <a href="railfence.html">RailFence</a>
+                    </li>
+
+                    <li>
+                        <a href="playfair.html">Playfair</a>
+                    </li>
+
+                    <li>
+                        <a href="transposition.html">Transposition</a>
+                    </li>
+
+                    <li>
+                        <a href="vigenere.html">Vigenere</a>
+                    </li>
+
+                    <li>
+                        <a href="aes.html">AES</a>
+                    </li>
+
+            </li>
+        </ul>
+        </li>
+
+        <li class="nav__item">
+            <h2 class="nav__title">Asymmetric</h2>
+
+            <ul class="nav__ul">
+                <li>
+                    <a href="rsa.html">RSA</a>
+                </li>
+
+                <li>
+                    <a href="dsa.html">DSA</a>
+                </li>
+
+                <!-- <li>
+                        <a href="#">Sitemap</a>
+                    </li> -->
+            </ul>
+        </li>
+        </ul>
+
+        <div class="legal">
+            <p>&copy; 2022. All rights reserved.</p>
+
+            <div class="legal__links">
+                <span>Made with ❤️ && ⚡ by Divyansh and Jainil</span>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/search.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="js/playfair.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/typewriter.js"></script>
+    <script type="text/javascript">
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+</body>
+
+</html>

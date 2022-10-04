@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Cryptographic Algorithms</title>
 
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
@@ -14,7 +14,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="images/website_logo.png">
-
 </head>
 
 <body>
@@ -97,111 +96,50 @@
         </div>
     </nav>
 
-    <!-- Body -->
-    <div class="home-first-block">
-        <div class="home-info">
-            <div class="home-question-title">
-                What is Cryptography?
-            </div>
-            <p class="home-question-answer">
-                Cryptography is technique of securing information and communications through use of codes so that only
-                those person for whom the information is intended can understand it and process it. Thus preventing
-                unauthorized access to information.
-                <br>
-                These algorithms are used for cryptographic key generation, digital signing, verification to protect
-                data privacy, web browsing on internet and to
-                protect confidential transactions such as credit card and debit card transactions.
-            </p>
-            <div class="arrow-box">
-                <img src="images/down_arrow.png" alt="Downward Arrow">
-            </div>
-            <div class="typing animate__animated animate__slideInUp">
-                Modules (
-                <span class="type-writer" style="margin: 10px;" data-wait="2000"
-                    data-words='["Symmetric Key Cryptography", "Hash Functions", "Asymmetric Key Cryptography"]'></span>
-                )
-            </div>
-        </div>
-        <div class="home-algo-info">
-            <iframe class="osvideo" width="500" height="300" src="https://www.youtube.com/embed/6_Cxj5WKpIw"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
-    </div>
-    <div class="home-second-block">
-        <div class="home-algo-basic-info">
-            <div class="home-algo-title" data-aos="zoom-in">
-                Symmetric Cryptography
-            </div>
-            <div class="home-specififc-algo-info" data-aos="fade-left">
-                <div class="card text-dark bg-light mb-3 home-card">
-                    <div class="card-header home-card-header">Basic Information</div>
-                    <div class="card-body home-card-body">
-                        <p class="card-text home-card-text">It is an encryption system where the sender and receiver of
-                            message use a single common key to encrypt and decrypt messages. The most popular symmetric
-                            key cryptography system is Data Encryption System(DES).</p>
-                        <a href="symmetric.html" class="btn btn-light home-algo-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                class="bi bi-check-circle home-tick" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                <path
-                                    d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
-                            </svg>
-                            Learn More
-                        </a>
+    <!-- Implementation -->
+    <div class="" style="margin: 25px 0px;">
+        <div class="row">
+            <div class="col-lg-6 info-card">
+                <div class="card bg-light" style="border-width: 2px;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center footer__logo">Symmetric Key Encryption</h5>
+                        <p class="card-text">
+                        <ul style="font-weight: bold; margin-left: 10px;">
+                            <li>Symmetric encryption is a type of encryption where only one key (a secret key) is used
+                                to both encrypt and decrypt electronic data.
+                            </li>
+                            <!-- <li>There are two types of symmetric encryption algorithms:
+                                <ol>
+                                    <li><u>Block algorithms:</u> Set lengths of bits are encrypted in blocks of electronic data
+                                        with the use of a specific secret key. As the data is being encrypted, the
+                                        system holds the data in its memory as it waits for complete blocks.</li>
+                                    <li><u>Stream algorithms:</u> Data is encrypted as it streams instead of being retained in the system's memory.</li>
+                                </ol>
+                            </li> -->
+                        </ul>
+                        <img src="images/sym.png" class="info-img">
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="home-algo-basic-info">
-            <div class="home-algo-title" id="title1" style="text-align: right;" data-aos="zoom-in">
-                Hash <br> Functions
-            </div>
-            <div class="home-specififc-algo-info" data-aos="fade-right">
-                <div class="card text-dark bg-light mb-3 home-card">
-                    <div class="card-header home-card-header">Basic Information</div>
-                    <div class="card-body home-card-body" style="align-items: flex-end;">
-                        <p class="card-text home-card-text">There is no usage of any key in this algorithm. A hash value
-                            with fixed length is calculated as per the plain text which makes it impossible for contents
-                            of plain text to be recovered. Many operating systems use hash functions to encrypt
-                            passwords.</p>
-                        <a href="" class="btn btn-light home-algo-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                class="bi bi-check-circle home-tick" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                <path
-                                    d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
-                            </svg>
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="home-algo-title" id="title" style="text-align: right;" data-aos="zoom-in">
-                Hash Functions
-            </div>
-        </div>
-        <div class="home-algo-basic-info">
-            <div class="home-algo-title" data-aos="zoom-in">
-                Asymmetric Cryptography
-            </div>
-            <div class="home-specififc-algo-info" data-aos="fade-left">
-                <div class="card text-dark bg-light mb-3 home-card">
-                    <div class="card-header home-card-header">Basic Information</div>
-                    <div class="card-body home-card-body">
-                        <p class="card-text home-card-text">Under this system a pair of keys is used to encrypt and
-                            decrypt information. A public key is used for encryption and a private key is used for
-                            decryption.</p>
-                        <a href="" class="btn btn-light home-algo-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                class="bi bi-check-circle home-tick" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                <path
-                                    d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
-                            </svg>
-                            Learn More
-                        </a>
+            <div class="col-lg-6 info-card">
+                <div class="card bg-light" style="border-width: 2px;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center footer__logo">Learn & Try Different Algorithms</h5>
+                        <p class="card-text" style="font-weight: bold;">
+                            <a href="caesar.html">
+                                <button class="button-54" role="button">Caesar Cipher</button></a> <br>
+                            <a href="railfence.html">
+                                <button class="button-54" role="button">RailFence Cipher</button></a> <br>
+                            <a href="playfair.html">
+                                <button class="button-54" role="button">Playfair Cipher</button></a> <br>
+                            <a href="transposition.html">
+                                <button class="button-54" role="button">Transposition Cipher</button></a> <br>
+                            <a href="vigenere.html">
+                                <button class="button-54" role="button">Vigenere Cipher</button></a> <br>
+                            <a href="aes.html">
+                                <button class="button-54" role="button">AES</button></a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -228,19 +166,19 @@
 
                 <ul class="nav__ul">
                     <li>
-                        <a href="md5.html">MD5</a>
+                        <a href="#">MD5</a>
                     </li>
 
                     <li>
-                        <a href="sha1.html">SHA-1</a>
+                        <a href="#">SHA-1</a>
                     </li>
 
                     <li>
-                        <a href="hmac.html">HMAC</a>
+                        <a href="#">HMAC</a>
                     </li>
 
                     <li>
-                        <a href="pbkdf2.html">PBKDF2</a>
+                        <a href="#">PBKDF2</a>
                     </li>
                 </ul>
             </li>
@@ -250,50 +188,50 @@
 
                 <ul class="nav__ul nav__ul--extra">
                     <li>
-                        <a href="caesar.html">Caesar</a>
+                        <a href="#">Caesar</a>
                     </li>
 
                     <li>
-                        <a href="railfence.html">RailFence</a>
+                        <a href="#">RailFence</a>
                     </li>
 
                     <li>
-                        <a href="playfair.html">Playfair</a>
+                        <a href="#">Playfair</a>
                     </li>
 
                     <li>
-                        <a href="transposition.html">Transposition</a>
+                        <a href="#">Transposition</a>
                     </li>
 
                     <li>
-                        <a href="vigenere.html">Vigenere</a>
+                        <a href="#">Vigenere</a>
                     </li>
 
                     <li>
-                        <a href="aes.html">AES</a>
+                        <a href="#">AES</a>
                     </li>
 
-                    </li>
-                </ul>
             </li>
+        </ul>
+        </li>
 
-            <li class="nav__item">
-                <h2 class="nav__title">Asymmetric</h2>
+        <li class="nav__item">
+            <h2 class="nav__title">Asymmetric</h2>
 
-                <ul class="nav__ul">
-                    <li>
-                        <a href="rsa.html">RSA</a>
-                    </li>
+            <ul class="nav__ul">
+                <li>
+                    <a href="#">RSA</a>
+                </li>
 
-                    <li>
-                        <a href="dsa.html">DSA</a>
-                    </li>
+                <li>
+                    <a href="#">DSA</a>
+                </li>
 
-                    <!-- <li>
+                <!-- <li>
                         <a href="#">Sitemap</a>
                     </li> -->
-                </ul>
-            </li>
+            </ul>
+        </li>
         </ul>
 
         <div class="legal">
@@ -308,7 +246,8 @@
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/search.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <!-- <script src="js/search.js"></script> -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/typewriter.js"></script>
     <script type="text/javascript">

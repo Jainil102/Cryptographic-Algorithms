@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Cryptographic Algorithms</title>
 
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
@@ -14,7 +14,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="images/website_logo.png">
-
 </head>
 
 <body>
@@ -97,116 +96,147 @@
         </div>
     </nav>
 
-    <!-- Body -->
-    <div class="home-first-block">
-        <div class="home-info">
-            <div class="home-question-title">
-                What is Cryptography?
-            </div>
-            <p class="home-question-answer">
-                Cryptography is technique of securing information and communications through use of codes so that only
-                those person for whom the information is intended can understand it and process it. Thus preventing
-                unauthorized access to information.
-                <br>
-                These algorithms are used for cryptographic key generation, digital signing, verification to protect
-                data privacy, web browsing on internet and to
-                protect confidential transactions such as credit card and debit card transactions.
-            </p>
-            <div class="arrow-box">
-                <img src="images/down_arrow.png" alt="Downward Arrow">
-            </div>
-            <div class="typing animate__animated animate__slideInUp">
-                Modules (
-                <span class="type-writer" style="margin: 10px;" data-wait="2000"
-                    data-words='["Symmetric Key Cryptography", "Hash Functions", "Asymmetric Key Cryptography"]'></span>
-                )
-            </div>
+    <!-- Middle Content -->
+    <div class="block">
+        <div class="overlay"></div>
+        <div class="heading">
+            <h1 class="animate__animated animate__slideInUp" data-aos="fade-in" style="text-align: center;">Columnar
+                Transposition Cipher
+            </h1>
         </div>
-        <div class="home-algo-info">
-            <iframe class="osvideo" width="500" height="300" src="https://www.youtube.com/embed/6_Cxj5WKpIw"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+        <div class="arrow-box">
+            <img src="images/down_arrow.png" alt="Downward Arrow">
         </div>
     </div>
-    <div class="home-second-block">
-        <div class="home-algo-basic-info">
-            <div class="home-algo-title" data-aos="zoom-in">
-                Symmetric Cryptography
+
+    <div class="mid-wrapper">
+        <div class="mid-data-block">
+            <div class="mid-info-block">
+                <p class="headings">
+                    <strong>Introduction</strong>
+                </p>
+                <p>
+                    The Columnar Transposition Cipher is a form of transposition
+                    cipher just like Rail Fence Cipher.
+                    Columnar Transposition involves writing the plaintext out in rows,
+                    and then reading the ciphertext off in columns one by one.
+                </p>
             </div>
-            <div class="home-specififc-algo-info" data-aos="fade-left">
-                <div class="card text-dark bg-light mb-3 home-card">
-                    <div class="card-header home-card-header">Basic Information</div>
-                    <div class="card-body home-card-body">
-                        <p class="card-text home-card-text">It is an encryption system where the sender and receiver of
-                            message use a single common key to encrypt and decrypt messages. The most popular symmetric
-                            key cryptography system is Data Encryption System(DES).</p>
-                        <a href="symmetric.html" class="btn btn-light home-algo-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                class="bi bi-check-circle home-tick" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                <path
-                                    d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
-                            </svg>
-                            Learn More
-                        </a>
-                    </div>
-                </div>
+
+            <div class="mid-example-block">
+                <p class="headings">
+                    <strong>Example:</strong>
+                </p>
+                <pre>
+                        Encryption
+                        Input :  Geeks on work
+                        Key = HACK
+                        Output : e w_eoo_Gs kknr_
+                        Decryption
+                        Input : e w_eoo_Gs kknr_
+                        Key = HACK
+                        Output : Geeks on work
+                    </pre>
             </div>
-        </div>
-        <div class="home-algo-basic-info">
-            <div class="home-algo-title" id="title1" style="text-align: right;" data-aos="zoom-in">
-                Hash <br> Functions
+
+            <div class="mid-encrypt-block">
+                <p class="headings">
+                    <strong>Encryption</strong>
+                </p>
+                <p>
+                    In a transposition cipher, the order of the alphabets is
+                    re-arranged to obtain the cipher-text.
+                </p>
+
+                <ol>
+                    <li>
+                        The message is written out in rows of a fixed length, and then read out again column by column,
+                        and the columns are chosen in some scrambled order.
+                    </li>
+                    <li>
+                        Width of the rows and the permutation of the columns are usually defined by a keyword.
+                    </li>
+                    <li>
+                        For example, the word HACK is of length 4 (so the rows are of length 4), and the permutation is
+                        defined by the alphabetical order of the letters in the keyword. In this case, the order would
+                        be “3 1 2 4”.
+                    </li>
+                    <li>
+                        Any spare spaces are filled with nulls or left blank or placed by a character (Example: _).
+                    </li>
+                    <li>
+                        Finally, the message is read off in columns, in the order specified by the keyword.
+                    </li>
+                </ol>
+
+                <p class="picture">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/columnar-transposition-cipher1.png">
+                </p>
             </div>
-            <div class="home-specififc-algo-info" data-aos="fade-right">
-                <div class="card text-dark bg-light mb-3 home-card">
-                    <div class="card-header home-card-header">Basic Information</div>
-                    <div class="card-body home-card-body" style="align-items: flex-end;">
-                        <p class="card-text home-card-text">There is no usage of any key in this algorithm. A hash value
-                            with fixed length is calculated as per the plain text which makes it impossible for contents
-                            of plain text to be recovered. Many operating systems use hash functions to encrypt
-                            passwords.</p>
-                        <a href="" class="btn btn-light home-algo-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                class="bi bi-check-circle home-tick" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                <path
-                                    d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
-                            </svg>
-                            Learn More
-                        </a>
-                    </div>
-                </div>
+
+            <div class="mid-decrypt-block">
+                <p class="headings">
+                    <strong>Decryption</strong>
+                </p>
+
+                <ol>
+                    <li>
+                        To decipher it, the recipient has to work out the column lengths by dividing the message length
+                        by the key length.
+                    </li>
+                    <li>
+                        Then, write the message out in columns again, then re-order the columns by reforming the key
+                        word.
+                    </li>
+                </ol>
             </div>
-            <div class="home-algo-title" id="title" style="text-align: right;" data-aos="zoom-in">
-                Hash Functions
+
+            <div class="mid-extra-block">
             </div>
-        </div>
-        <div class="home-algo-basic-info">
-            <div class="home-algo-title" data-aos="zoom-in">
-                Asymmetric Cryptography
-            </div>
-            <div class="home-specififc-algo-info" data-aos="fade-left">
-                <div class="card text-dark bg-light mb-3 home-card">
-                    <div class="card-header home-card-header">Basic Information</div>
-                    <div class="card-body home-card-body">
-                        <p class="card-text home-card-text">Under this system a pair of keys is used to encrypt and
-                            decrypt information. A public key is used for encryption and a private key is used for
-                            decryption.</p>
-                        <a href="" class="btn btn-light home-algo-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                class="bi bi-check-circle home-tick" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                <path
-                                    d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
-                            </svg>
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
+
+
+    <!-- Implementation -->
+    <div class="last-block">
+        <div class="mid-heading-wrapper">
+            <div class="mid-heading">
+                <h1 class="hover-border">Implementation</h1>
+            </div>
+        </div>
+        <div class="">
+            <div class="row">
+                <div class="col-lg-6 info-card">
+                    <div class="card border-success">
+                        <div class="card-body">
+                            <h5 class="card-title text-center footer__logo">Encryption</h5>
+                            <br>
+                            <p class="card-text" style="font-weight: bold;">
+                                Plaintext: <input type="text" id="plain-text" class="input"><br><br>
+                                Key: <input type="text" id="key" class="input key"><br><br>
+                                Ciphered Text: <text id="output" style="margin-left: 15px;"></text>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 info-card">
+                    <div class="card border-danger">
+                        <div class="card-body">
+                            <h5 class="card-title text-center footer__logo">Decryption</h5>
+                            <br>
+                            <p class="card-text" style="font-weight: bold;">
+                                Ciphered Text: <input type="text" id="cipher-text" class="dinput"><br><br>
+                                Key: <input type="text" id="d-key" class="input dkey"><br><br>
+                                Plain Text: <text id="d-output" style="margin-left: 40px;"></text>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -273,27 +303,27 @@
                         <a href="aes.html">AES</a>
                     </li>
 
-                    </li>
-                </ul>
             </li>
+        </ul>
+        </li>
 
-            <li class="nav__item">
-                <h2 class="nav__title">Asymmetric</h2>
+        <li class="nav__item">
+            <h2 class="nav__title">Asymmetric</h2>
 
-                <ul class="nav__ul">
-                    <li>
-                        <a href="rsa.html">RSA</a>
-                    </li>
+            <ul class="nav__ul">
+                <li>
+                    <a href="rsa.html">RSA</a>
+                </li>
 
-                    <li>
-                        <a href="dsa.html">DSA</a>
-                    </li>
+                <li>
+                    <a href="dsa.html">DSA</a>
+                </li>
 
-                    <!-- <li>
+                <!-- <li>
                         <a href="#">Sitemap</a>
                     </li> -->
-                </ul>
-            </li>
+            </ul>
+        </li>
         </ul>
 
         <div class="legal">
@@ -309,6 +339,7 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/transposition.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/typewriter.js"></script>
     <script type="text/javascript">

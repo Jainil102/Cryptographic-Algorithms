@@ -60,10 +60,6 @@ body {
     width: 20px;
 }
 
-.hover-border {
-    font-family: 'Pacifico', cursive;
-}
-
 .hover-border::after {
     content: '';
     width: 0%;
@@ -321,33 +317,32 @@ body {
     margin-right: 10px;
 }
 
-
+/* index.html */
 @media only screen and (max-width: 1088px) {
-    .osvideo{
-        transform: scale(0.9);
-    }
 
+    .osvideo,
     .home-question-title,
     .home-question-answer {
-        transform: scale(0.7);
+        transform: scale(1);
     }
 
     .home-info,
     .home-algo-info {
-        /* width: 60vw; */
+        width: 60vw;
     }
 
     .home-question-answer {
         font-size: x-large;
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 10px;
     }
 
-    .typing,
+    .typing, .arrow-box,
+    .arrow-box img {
+        display: none;
+    }
+
     .arrow-box {
-        /* display: none; */
-        margin-left: 65px;
-        margin-top: 0px;
+        display: none;
     }
 
     .home-algo-title,
@@ -361,15 +356,6 @@ body {
 }
 
 @media only screen and (max-width: 797px) {
-    body {
-        margin: 0px;
-    }
-
-    .typing,
-    .arrow-box {
-        display: none;
-    }
-
     #title1 {
         display: block;
     }
@@ -412,7 +398,9 @@ body {
 }
 
 /* Footer */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
@@ -422,7 +410,7 @@ body {
     padding: 30px 30px 20px 30px;
     color: white;
     font-weight: bold;
-    background-color:  #212529;
+    background-color: #212529;
     border-top: 1px solid #e5e5e5;
 }
 
@@ -520,6 +508,7 @@ body {
     color: #2f2f2f;
 }
 
+/* Footer */
 @media screen and (min-width: 24.375em) {
     .legal .legal__links {
         margin-left: auto;
@@ -544,139 +533,376 @@ body {
     }
 }
 
-
-/* Footer OLD */
-
-.footercontainer {
-    padding: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-dark {
-    padding: 0px 0px;
-    width: 100vw;
-    color: #f0f9ff;
-    background-color: #282d32;
-    padding-bottom: 20px;
-    padding-top: 10px;
-}
-
-.footer-dark h4 {
-    margin-top: 0;
-    margin-bottom: 0px;
-    font-weight: bold;
+/* button */
+.button-54 {
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
-}
-
-.footer-dark ul {
-    padding: 0;
-    list-style: none;
-    line-height: 1.6;
-    font-size: 14px;
-    margin-bottom: 0;
-}
-
-.footer-dark ul a {
-    color: inherit;
+    letter-spacing: 2px;
     text-decoration: none;
-}
-
-.footerflex-1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.footerrow {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.footerpanel-title {
-    background-color: #282d32;
-    color: #f0f9ff;
+    text-transform: uppercase;
+    color: #000;
     cursor: pointer;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    width: 200px;
-    border: 0;
-    text-align: center;
-    outline: none !important;
-    font-weight: bold;
-    font-size: 16px;
-    margin-right: 20px;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    margin-top: 25px;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
-.footercontent {
-    display: flex;
-    color: #f0f9ff;
-    padding: 0px 20px;
-    overflow: hidden;
-    background-color: #282d32;
-    margin: 0 px;
+.button-54:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
 }
 
-.footercontent,
-ul {
-    justify-content: center;
-    padding: 0px;
+/* Button */
+@media (min-width: 768px) {
+    .button-54 {
+        padding: 0.25em 0.75em;
+    }
 }
 
-.footercontent>ul>li>a:hover {
-    color: #81C3F1;
-}
+/* Theory */
 
-#footerpanel {
-    background-color: #282d32;
-    margin: 10px;
-    align-items: center;
-    border: none;
-}
-
-.footerpanel-heading {
-    padding: 0px;
-}
-
-.footerpanel-group {
+.block {
+    position: relative;
     display: flex;
     flex-direction: column;
-    margin-right: 30px;
+    min-height: 80px;
+    height: 100vh;
+    width: 100vw;
     justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: .1;
+    width: 50%;
+    height: 100%;
+    background: #3e64ff;
+}
+
+.heading h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.arrow-box {
+    display: flex;
+    align-items: flex-start;
+    width: 40px;
+    height: 100px;
+}
+
+.arrow-box>img {
+    width: 100%;
+    height: 40%;
+    animation: up-to-down 1s ease infinite;
+}
+
+/* Info Cards for Minor Project*/
+
+.mid-wrapper {
+    margin: 40px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 2px solid black;
+}
+
+.mid-data-block {
+    margin: 5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mid-wrapper .mid-data-block .mid-info-block ul,
+.mid-wrapper .mid-data-block .mid-encrypt-block ul,
+.mid-wrapper .mid-data-block .mid-decrypt-block ul,
+.mid-wrapper .mid-data-block .mid-example-block ul,
+.mid-wrapper .mid-data-block .mid-extra-block ul {
+    padding-left: 2rem;
+}
+
+.mid-encrypt-block,
+.mid-decrypt-block,
+.mid-example-block,
+.mid-info-block,
+.mid-extra-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.mid-encrypt-block p,
+.mid-decrypt-block p,
+.mid-example-block p,
+.mid-info-block p {
+    margin-bottom: 8px;
+}
+
+pre {
+    text-align: left;
+    white-space: pre-line;
+}
+
+.picture {
     text-align: center;
-    width: 200px;
 }
 
-.footerlinks {
-    margin: 20px;
+.picture img {
+    width: 40%;
+    height: fit-content;
+    text-align: center;
 }
 
-.accordion-button::after {
-    flex-shrink: 0;
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-left: auto;
-    font-family: "FontAwesome";
-    content: "\f107";
-    color: #f0f9ff;
-    background-size: 1.25rem;
-    transition: transform 0.2s ease-in-out 0s;
+.pictures {
+    text-align: center;
 }
 
-.accordion-button:not(.collapsed) {
-    color: #f0f9ff;
-    background-color: #282d32;
-    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+.pictures img {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
 }
 
-.accordion-button:not(.collapsed)::after {
-    background-image: none;
-    transform: rotate(180deg);
+/* Theory */
+@media only screen and (max-width:750px) {
+    .picture img {
+        width: 50%;
+        height: fit-content;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .picture img {
+        width: 80%;
+        height: fit-content;
+    }
+}
+
+/* Implementation */
+
+.last-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+    max-height: fit-content;
+    margin-bottom: 50px;
+}
+
+
+.mid-heading-wrapper {
+    margin-bottom: 75px;
+    min-height: 65px;
+}
+
+.mid-heading {
+    margin-top: 30px;
+    position: relative;
+    height: 100%;
+}
+
+.mid-heading h1 {
+    text-align: center;
+    font-size: 2.9rem;
+    font-weight: 700;
+}
+
+.mid-heading:hover {
+    cursor: pointer;
+}
+
+.mid-heading:hover .hover-border::after {
+    left: 0%;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+
+/* Symmetric & Encryption Decryption */
+.info-card {
+    width: 35rem;
+}
+
+.info-img {
+    width: 450px;
+}
+
+.input {
+    width: 22rem; 
+    margin-left: 50px;
+}
+.dinput {
+    width: 22rem; 
+    margin-left: 12px;
+}
+.key {
+    margin-left: 90px;
+}
+.dkey {
+    margin-left: 87px;
+}
+
+@media only screen and (max-width: 1120px) {
+    .info-card {
+        width: 30rem;
+    }
+    .info-img {
+        width: 400px;
+    }
+    .button-54 {
+        font-size: 14px;
+    }
+    .input {
+        width: 18rem; 
+    }
+    .dinput {
+        width: 18rem; 
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .info-card {
+        width: 25rem;
+    }
+    .info-img {
+        width: 350px;
+    }
+    .button-54 {
+        font-size: 11px;
+    }
+    .input {
+        width: 13rem; 
+    }
+    .dinput {
+        width: 13rem; 
+    }
+}
+
+@media only screen and (max-width: 797px) {
+    .info-card {
+        width: 20rem;
+    }
+    .info-img {
+        width: 250px;
+    }
+    .button-54 {
+        font-size: 10px;
+    }
+    .input, .dinput {
+        width: 10rem; 
+        margin-left: 10px;
+    }
+    .key {
+        margin-left: 42px;
+    }
+    .dkey {
+        margin-left: 70px;
+    }
+    .info-card p {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .info-card {
+        width: 90%;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+    .info-img {
+        width: 450px;
+    }
+    .button-54 {
+        font-size: 16px;
+    }
+    .input {
+        width: 22rem; 
+        margin-left: 44px;
+    }
+    .key {
+        margin-left: 75px;
+    }
+    .dinput {
+        width: 22rem; 
+        margin-left: 17px;
+    }
+    .dkey {
+        margin-left: 78px;
+    }
+}
+
+@media only screen and (max-width: 545px) {
+    .info-card {
+        width: 90%;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+    .info-img {
+        width: 400px;
+    }
+    .button-54 {
+        font-size: 16px;
+    }
+    .input {
+        width: 18rem; 
+        margin-left: 44px;
+    }
+    .key {
+        margin-left: 75px;
+    }
+    .dinput {
+        width: 18rem; 
+        margin-left: 17px;
+    }
+    .dkey {
+        margin-left: 78px;
+    }
+}
+
+@media only screen and (max-width: 485px) {
+    .info-card {
+        width: 90%;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+    .info-img {
+        width: 300px;
+    }
+    .button-54 {
+        font-size: 16px;
+    }
+    .input {
+        width: 15rem; 
+        margin-left: 44px;
+    }
+    .key {
+        margin-left: 75px;
+    }
+    .dinput {
+        width: 15rem; 
+        margin-left: 17px;
+    }
+    .dkey {
+        margin-left: 78px;
+    }
 }
