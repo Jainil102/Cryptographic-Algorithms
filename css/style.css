@@ -105,7 +105,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* width: 90vw; */
+    width: 90vw;
     height: fit-content;
     margin: 0px;
     position: relative;
@@ -139,7 +139,7 @@ body {
 .home-question-title {
     position: relative;
     color: black;
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: 600;
     text-align: left;
     margin-bottom: 20px;
@@ -165,7 +165,7 @@ body {
     font-weight: bold;
 }
 
-.arrow-box {
+.arrow-box{
     display: flex;
     align-items: flex-start;
     width: 20px;
@@ -173,7 +173,7 @@ body {
     margin: 5px;
 }
 
-.arrow-box>img {
+.arrow-box > img{
     width: 100%;
     height: 40%;
     animation: up-to-down 1s ease infinite;
@@ -185,8 +185,7 @@ body {
     }
 }
 
-.txt,
-.typing {
+.txt, .typing {
     font-size: 100%;
     color: black;
     font-weight: bold;
@@ -202,11 +201,175 @@ body {
 }
 
 .osvideo {
-    box-shadow: 7px 6px 22px 2px rgba(0, 0, 0, 0.45);
-    -webkit-box-shadow: 7px 6px 22px 2px rgba(0, 0, 0, 0.45);
-    -moz-box-shadow: 7px 6px 22px 2px rgba(0, 0, 0, 0.45);
+    box-shadow: 7px 6px 22px 2px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 7px 6px 22px 2px rgba(0,0,0,0.45);
+    -moz-box-shadow: 7px 6px 22px 2px rgba(0,0,0,0.45);
 }
 
+/* HOME PAGE SECOND BLOCK */
+
+.home-second-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90vw;
+    height: fit-content;
+    position: relative;
+}
+
+.home-algo-basic-info {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 40%;
+    margin: 20px;
+}
+
+.home-algo-title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: black;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-align: left;
+    margin: 10px;
+    width: 30%;
+    height: 100%;
+}
+
+#title1 {
+    display: none;
+}
+
+.home-specififc-algo-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: black;
+    text-align: center;
+    margin: 10px;
+    width: 60%;
+    height: 100%;
+    /* min-width: 412px; */
+}
+
+.home-card {
+    height: fit-content;
+}
+
+
+
+.home-card-header {
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.home-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.home-card-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+}
+
+.home-algo-button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    color: black;
+    text-align: left;
+    font-weight: bold;
+    border: 2px solid black;
+    transition: all 0.5s ease-in;
+}
+
+.home-tick {
+    display: none;
+    transition: all 0.5s ease-in;
+}
+
+.home-algo-button:hover {
+    background-color: black;
+    color:  white;
+}
+
+.home-algo-button:hover .home-tick {
+    display: block;
+    color: white;
+    margin-right: 10px;
+}
+
+
+@media only screen and (max-width: 1088px) {
+    .osvideo, .home-question-title, .home-question-answer {
+        transform: scale(0.8);
+    }
+    .home-info, .home-algo-info {
+        width: 60vw;
+    }
+    .home-question-answer {
+        font-size: x-large;
+        margin-top: 10px;
+    }
+    .typing, .arrow-box {
+        display: none;
+    }
+    .home-algo-title, .home-specififc-algo-info {
+        transform: scale(0.5);
+    }
+    .home-algo-title {
+        font-size: 2em;
+    }
+} 
+
+@media only screen and (max-width: 797px) {
+    #title1 {
+        display: block;
+    }
+    #title {
+        display: none;
+    }
+    .home-algo-title, .home-specififc-algo-info {
+        width: fit-content;
+    }
+    .home-algo-title {
+        text-align: center !important;
+    }
+    .home-algo-basic-info {
+        margin: 20px;
+        border-bottom: 5px solid black;
+    }
+    .home-card-text {
+        text-align: center;
+    }
+    .home-card-body {
+        align-items: center !important;
+        justify-content: center !;
+    }
+    .home-info, .home-algo-info {
+        width: 100vw;
+    }
+    .osvideo {
+        transform: scale(0.7);
+    }
+}
 /* HOME PAGE SECOND BLOCK */
 
 .home-second-block {
