@@ -1069,3 +1069,37 @@ pre {
         margin-left: 78px;
     }
 }
+
+@media only screen and (max-width: 426px) {
+    .input {
+        width: 13rem; 
+        margin-left: 44px;
+    }
+    .key {
+        margin-left: 75px;
+    }
+    .dinput {
+        width: 13rem; 
+        margin-left: 17px;
+    }
+    .dkey {
+        margin-left: 78px;
+    }
+}
+
+@media only screen and (max-width: 385px) {
+    .input {
+        width: 10rem; 
+        margin-left: 44px;
+    }
+    .key {
+        margin-left: 75px;
+    }
+    .dinput {
+        width: 10rem; 
+        margin-left: 17px;
+    }
+    .dkey {
+        margin-left: 78px;
+    }
+}
