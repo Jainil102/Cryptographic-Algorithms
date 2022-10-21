@@ -37,3 +37,5 @@ function decrypt(str, key){
 }
 
 decrypt(encrypt("Attack Tomorrow 1/1/2022", 3), 3)
+
+// Edit
